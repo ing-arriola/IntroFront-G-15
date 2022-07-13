@@ -70,8 +70,8 @@ export class Counter extends Component {
             placeholder='Ingresa el limite Inferior' 
             setLimit={this.establecerLimiteSuperior}
         />
-        <Button handleClick={this.aumentarContador} label='UP' color={true}  />
-        <Button handleClick={this.disminuirContador} label='Down' color={false}  />
+        <Button handleClick={this.aumentarContador} label='UP' clase='btn btn-success'  />
+        <Button handleClick={this.disminuirContador} label='Down' clase='btn btn-danger'  />
 
         <button onClick={ () => this.resetState() } >Reset</button>
         <ul>
