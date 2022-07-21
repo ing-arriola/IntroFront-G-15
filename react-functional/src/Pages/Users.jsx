@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react' //No olvide el import de los hooks a usar
 import { placeholderApi } from '../Api/placeholderApi'
+import { Link } from 'react-router-dom'
 
 export const Users = () => {
     
@@ -30,11 +31,11 @@ export const Users = () => {
         {
             users.map(user => (
                 <li key={user.id} >
-                    <p>
+                    <Link to={`/users/${user.id}`} >
                         {
-                            `Name: ${ user.name}, Username ${user.username}, email: ${user.email}`
+                            `${ user.name}`
                         }
-                    </p>        
+                    </Link>        
                 </li>
             ))
         }
